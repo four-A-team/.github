@@ -16,8 +16,9 @@
 - **Ayu**  
 - **Arini**
 
-### Tentang Kami
-FOUR A TEAM adalah tim kecil yang beranggotakan 4 orang mahasiswa yang berkomitmen untuk belajar dan mengembangkan aplikasi berbasis web secara profesional.  
+### Tentang Kami 
+FOUR A TEAM adalah tim developer beranggotakan 4 orang, fokus pada pengembangan aplikasi berbasis **Laravel 12 + Tailwind CSS**.  
+Project utama kami adalah **Sistem Absensi Karyawan** untuk mata kuliah *Workshop Web Lanjut*. 
 Proyek ini merupakan implementasi sistem **Absensi Karyawan** berbasis web dengan framework **Laravel 12** dan **Tailwind CSS** sebagai latihan kerja tim dan kolaborasi menggunakan **GitHub Organization**.
 
 ---
