@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="link-logo.png" width="200" alt="Four A Team Logo">
-</p>
+
 
 
 ![Laravel](https://img.shields.io/badge/Laravel-12-red?logo=laravel)
