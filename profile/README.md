@@ -74,7 +74,7 @@ Namun, ide, masukan, dan saran selalu terbuka melalui [Issues](../../issues).
 
 ## 📬 Kontak
 Jika ingin berdiskusi atau berkolaborasi, hubungi kami melalui:  
-- 📧 Email: mdhyaulatha@gmail.com
+- 📧 Email: -
 - 🌐 Website (coming soon)  
 
 ---
