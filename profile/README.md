@@ -1,6 +1,13 @@
-![Laravel](https://img.shields.io/badge/Laravel-12-red)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
+<p align="center">
+  <img src="link-logo.png" width="200" alt="Four A Team Logo">
+</p>
+
+
+![Laravel](https://img.shields.io/badge/Laravel-12-red?logo=laravel)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3-blue?logo=tailwindcss)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-orange?logo=mysql)
+![GitHub](https://img.shields.io/badge/GitHub-Org-green?logo=github)
+
 
 
 # Absensi Karyawan - Laravel 12 + Tailwind CSS
