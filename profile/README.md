@@ -3,6 +3,8 @@
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-orange?logo=mysql)
 ![GitHub](https://img.shields.io/badge/GitHub-Org-green?logo=github)
 
+![Uploading image.png…]()
+
 # 🚀 FOUR A TEAM
 
 ## 👥 Tim Pengembang
