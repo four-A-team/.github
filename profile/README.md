@@ -81,8 +81,8 @@ Namun, ide, masukan, dan saran selalu terbuka melalui [Issues](../../issues).
 
 ## 📬 Kontak
 Jika ingin berdiskusi atau berkolaborasi, hubungi kami melalui:  
-- 📧 Email: *(akan ditambahkan)*  
-- 🌐 Website: *(coming soon)*  
+
+*ralat hanya menerima member untuk berdiskusi dan berkolaborasi*
 
 ---
 
