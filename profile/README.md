@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
   <img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
   <img src="https://img.shields.io/badge/GitHub-Organization-181717?style=for-the-badge&logo=github&logoColor=white" />
-  <img src="https://img.shields.io/badge/FOUR%20A%20TEAM-Developer-blue" />
+  <img src="https://img.shields.io/badge/FOUR%20A%20TEAM?style=for-the-badge&logo=FOUR&logoColor=white" />
 </p>
 
 <!-- Logo Komunitas -->
