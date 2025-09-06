@@ -8,7 +8,7 @@
 
 
 
-# Absensi Karyawan - Laravel 12 + Tailwind CSS
+# FOUR A TEAM
 
 ## 👥 Tim Pengembang: FOUR A TEAM
 - **Ammar**  
@@ -78,6 +78,8 @@ Jika ingin berdiskusi atau berkolaborasi, hubungi kami melalui:
 - 🌐 Website (coming soon)  
 
 ---
+
+## untuk 
 
 ## 📜 Lisensi
 Proyek dalam organisasi ini bersifat akademik dan digunakan untuk keperluan pembelajaran.  
