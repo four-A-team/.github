@@ -67,8 +67,9 @@ Detail lengkap kebutuhan sistem bisa dibaca di file:
 Anggota paling aktif akan mendapatkan **hadiah spesial dari Kapten Ammar 🎁**  
 
 <!-- LEADERBOARD:START -->
-Leaderboard akan muncul otomatis di sini setelah workflow berjalan.
+(tabel akan muncul di sini)
 <!-- LEADERBOARD:END -->
+
 
 ---
 

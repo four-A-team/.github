@@ -1,50 +1,64 @@
-import { Octokit } from "@octokit/rest";
-import fs from "fs";
+const fs = require("fs");
+const { Octokit } = require("@octokit/rest");
 
-const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN,
-});
+const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
-const org = "FOUR-A-TEAM"; // ganti dengan nama organisasi mu
+const ORG = "four-A-team";   // ganti sesuai nama org kamu
+const FILE = ".github/profile/README.md";
 
 async function main() {
-  // Ambil daftar anggota organisasi
+  // Ambil member org
   const { data: members } = await octokit.orgs.listMembers({
-    org,
+    org: ORG,
+    per_page: 100,
   });
 
-  let leaderboard = [];
-
+  // Ambil kontribusi tiap member dari repo org
+  let scores = {};
   for (const member of members) {
-    // Hitung kontribusi publik di seluruh GitHub
-    const { data: user } = await octokit.users.getByUsername({
-      username: member.login,
+    const username = member.login;
+    scores[username] = 0;
+
+    // hitung kontribusi di semua repo org
+    const { data: repos } = await octokit.repos.listForOrg({
+      org: ORG,
+      type: "all",
+      per_page: 50,
     });
 
-    leaderboard.push({
-      login: member.login,
-      contributions: user.public_repos + user.followers, // metrik sederhana
-    });
+    for (const repo of repos) {
+      const { data: commits } = await octokit.repos.listCommits({
+        owner: ORG,
+        repo: repo.name,
+        author: username,
+        per_page: 100,
+      });
+
+      scores[username] += commits.length;
+    }
   }
 
-  // Urutkan berdasarkan kontribusi
-  leaderboard.sort((a, b) => b.contributions - a.contributions);
+  // Urutkan leaderboard
+  const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
 
-  // Ambil top 5
-  const top = leaderboard.slice(0, 5);
-
-  // Buat tabel leaderboard
-  let table = `# 🏆 Leaderboard Anggota Aktif\n\n`;
-  table += `Hadiah akan diberikan oleh **Kapten Ammar** 🎁\n\n`;
-  table += `| Peringkat | Anggota | Skor |\n`;
-  table += `|-----------|---------|------|\n`;
-
-  top.forEach((user, i) => {
-    table += `| ${i + 1} | [@${user.login}](https://github.com/${user.login}) | ${user.contributions} |\n`;
+  let table = `| Peringkat | Anggota | Kontribusi |\n|-----------|---------|-------------|\n`;
+  sorted.forEach(([user, score], i) => {
+    table += `| ${i + 1} | ${user} | ${score} |\n`;
   });
 
-  // Tulis ke README.md
-  fs.writeFileSync(".github/profile/README.md", table);
+  // Update README
+  let readme = fs.readFileSync(FILE, "utf-8");
+  const start = "<!-- LEADERBOARD:START -->";
+  const end = "<!-- LEADERBOARD:END -->";
+  const regex = new RegExp(`${start}[\\s\\S]*${end}`);
+
+  const replacement = `${start}\n${table}\n${end}`;
+  readme = readme.replace(regex, replacement);
+
+  fs.writeFileSync(FILE, readme);
 }
 
-main();
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
