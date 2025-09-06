@@ -3,21 +3,42 @@
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-orange?logo=mysql)
 ![GitHub](https://img.shields.io/badge/GitHub-Org-green?logo=github)
 
-![Uploading image.png…]()
-
 # 🚀 FOUR A TEAM
 
 ## 👥 Tim Pengembang
-- **Ammar** (Kapten)  
-- **Atha**  
-- **Ayu**  
-- **Arini**
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://github.com/four-A-team.png" width="120" style="border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,.15);"/>
+        <br/>
+        <strong>Ammar</strong><br/>
+        <sub>Kapten</sub>
+      </td>
+      <td align="center">
+        <img src="https://github.com/atha.png" width="120" style="border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,.15);"/>
+        <br/>
+        <strong>Atha</strong>
+      </td>
+      <td align="center">
+        <img src="https://github.com/ayu.png" width="120" style="border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,.15);"/>
+        <br/>
+        <strong>Ayu</strong>
+      </td>
+      <td align="center">
+        <img src="https://github.com/arini.png" width="120" style="border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,.15);"/>
+        <br/>
+        <strong>Arini</strong>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ---
 
 ### 🌟 Tentang Kami
 **FOUR A TEAM** adalah tim developer beranggotakan 4 orang, fokus pada pengembangan aplikasi berbasis **Laravel 12 + Tailwind CSS**.  
-Project utama kami adalah **Sistem Absensi Karyawan** untuk mata kuliah *Workshop Web Lanjut*.  
+Project utama kami adalah **Sistem Absensi Karyawan** untuk mata kuliah *Workshop Web Lanjut*.
 
 Proyek ini merupakan implementasi sistem **Absensi Karyawan** berbasis web dengan framework **Laravel 12** dan **Tailwind CSS** sebagai latihan kerja tim dan kolaborasi menggunakan **GitHub Organization**.
 
