@@ -2,8 +2,8 @@ name: Update Leaderboard
 
 on:
   schedule:
-    - cron: "0 * * * *" # jalan tiap 1 jam sekali
-  workflow_dispatch: # bisa dijalankan manual
+    - cron: "0 * * * *" # jalan tiap 1 jam
+  workflow_dispatch:
 
 jobs:
   build:
@@ -17,18 +17,20 @@ jobs:
         with:
           node-version: "18"
 
-      - name: Install dependencies
-        run: npm install @octokit/rest
+      - name: Init project & install dependencies
+        run: |
+          npm init -y
+          npm install @octokit/rest
 
       - name: Run leaderboard script
         run: node scripts/updateLeaderboard.js
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .github/profile/README.md
-          git commit -m "Update leaderboard"
+          git commit -m "Update leaderboard" || echo "No changes to commit"
           git push
