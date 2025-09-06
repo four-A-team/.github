@@ -1,9 +1,7 @@
 <div align="center">
-  
-<!-- Animated Header -->
+
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=40&duration=3000&pause=1000&color=6366F1&background=00000000&center=true&vCenter=true&width=600&height=80&lines=FOUR+A+TEAM;" alt="Typing SVG" />
 
-<!-- Badges with Animation -->
 <p>
   <img src="https://img.shields.io/badge/Laravel-12-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
@@ -25,31 +23,6 @@
 <div style="height: 4px; background: linear-gradient(90deg, transparent, #6366f1, transparent); margin: 40px 0; animation: shimmer 2s infinite;"></div>
 
 </div>
-
-<style>
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-
-@keyframes shimmer {
-  0% { background-position: -200px 0; }
-  100% { background-position: 200px 0; }
-}
-
-@keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes bounce {
-  0%, 20%, 53%, 80%, 100% { transform: translate3d(0,0,0); }
-  40%, 43% { transform: translate3d(0,-30px,0); }
-  70% { transform: translate3d(0,-15px,0); }
-  90% { transform: translate3d(0,-4px,0); }
-}
-</style>
 
 ## 👥 Tim Pengembang
 
@@ -338,29 +311,3 @@ Proyek ini bersifat akademik dan digunakan untuk keperluan pembelajaran.<br/>
 </div>
 
 </div>
-
-
-<style>
-.glow {
-  animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from { box-shadow: 0 0 5px #6366f1, 0 0 10px #6366f1, 0 0 15px #6366f1; }
-  to { box-shadow: 0 0 10px #8b5cf6, 0 0 20px #8b5cf6, 0 0 30px #8b5cf6; }
-}
-
-.hover-scale:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.slide-in {
-  animation: slideIn 1s ease-out;
-}
-
-@keyframes slideIn {
-  from { opacity: 0; transform: translateY(50px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-</style>
