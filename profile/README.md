@@ -3,6 +3,10 @@
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-orange?logo=mysql)
 ![GitHub](https://img.shields.io/badge/GitHub-Org-green?logo=github)
 
+<p align="center">
+  <img src="file.jpg" alt="FOUR A TEAM" width="600" style="border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.15);"/>
+</p>
+
 # 🚀 FOUR A TEAM
 
 ## 👥 Tim Pengembang
@@ -10,25 +14,25 @@
   <table>
     <tr>
       <td align="center">
-        <img src="https://github.com/four-A-team.png" width="120" style="border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,.15);"/>
+        <img src="https://github.com/scythe71.png" width="120" style="border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,.15);"/>
         <br/>
-        <strong>Ammar</strong><br/>
+        <strong><a href="https://github.com/scythe71">Ammar</a></strong><br/>
         <sub>Kapten</sub>
       </td>
       <td align="center">
-        <img src="https://github.com/atha.png" width="120" style="border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,.15);"/>
+        <img src="https://github.com/Bangkah.png" width="120" style="border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,.15);"/>
         <br/>
-        <strong>Atha</strong>
+        <strong><a href="https://github.com/Bangkah">Atha</a></strong>
       </td>
       <td align="center">
-        <img src="https://github.com/ayu.png" width="120" style="border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,.15);"/>
+        <img src="https://github.com/Ayuamelia79.png" width="120" style="border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,.15);"/>
         <br/>
-        <strong>Ayu</strong>
+        <strong><a href="https://github.com/Ayuamelia79">Ayu</a></strong>
       </td>
       <td align="center">
-        <img src="https://github.com/arini.png" width="120" style="border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,.15);"/>
+        <img src="https://github.com/Arinisafitri29.png" width="120" style="border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,.15);"/>
         <br/>
-        <strong>Arini</strong>
+        <strong><a href="https://github.com/Arinisafitri29">Arini</a></strong>
       </td>
     </tr>
   </table>
