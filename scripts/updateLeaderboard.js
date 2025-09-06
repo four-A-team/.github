@@ -1,99 +1,50 @@
-// scripts/updateLeaderboard.js
-const fs = require("fs");
-const { Octokit } = require("@octokit/rest");
+import { Octokit } from "@octokit/rest";
+import fs from "fs";
 
 const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN,
 });
 
-const owner = "four-A-team";  // ganti dengan nama org kamu
-const repo = ".github";       // repo tempat README
+const org = "FOUR-A-TEAM"; // ganti dengan nama organisasi mu
 
 async function main() {
-  const members = ["Ammar", "Atha", "Ayu", "Arini"];
-  const scores = {};
-
-  for (const m of members) {
-    scores[m] = { commits: 0, prs: 0, issues: 0, reviews: 0, total: 0 };
-  }
-
-  // hitung commits
-  const commits = await octokit.repos.listCommits({ owner, repo, per_page: 100 });
-  commits.data.forEach(c => {
-    const author = c.commit.author.name;
-    if (scores[author]) {
-      scores[author].commits++;
-    }
+  // Ambil daftar anggota organisasi
+  const { data: members } = await octokit.orgs.listMembers({
+    org,
   });
 
-  // hitung pull requests
-  const prs = await octokit.pulls.list({ owner, repo, state: "all", per_page: 100 });
-  prs.data.forEach(pr => {
-    const author = pr.user.login;
-    if (scores[author]) {
-      scores[author].prs++;
-    }
-  });
+  let leaderboard = [];
 
-  // hitung issues
-  const issues = await octokit.issues.listForRepo({ owner, repo, state: "all", per_page: 100 });
-  issues.data.forEach(issue => {
-    if (!issue.pull_request) {
-      const author = issue.user.login;
-      if (scores[author]) {
-        scores[author].issues++;
-      }
-    }
-  });
+  for (const member of members) {
+    // Hitung kontribusi publik di seluruh GitHub
+    const { data: user } = await octokit.users.getByUsername({
+      username: member.login,
+    });
 
-  // hitung review PR
-  for (const pr of prs.data) {
-    const reviews = await octokit.pulls.listReviews({ owner, repo, pull_number: pr.number });
-    reviews.data.forEach(r => {
-      const reviewer = r.user.login;
-      if (scores[reviewer]) {
-        scores[reviewer].reviews++;
-      }
+    leaderboard.push({
+      login: member.login,
+      contributions: user.public_repos + user.followers, // metrik sederhana
     });
   }
 
-  // hitung total skor
-  for (const m of members) {
-    scores[m].total =
-      scores[m].commits * 1 +
-      scores[m].prs * 3 +
-      scores[m].issues * 2 +
-      scores[m].reviews * 2;
-  }
+  // Urutkan berdasarkan kontribusi
+  leaderboard.sort((a, b) => b.contributions - a.contributions);
 
-  // buat leaderboard
-  const leaderboard = Object.entries(scores)
-    .sort((a, b) => b[1].total - a[1].total)
-    .map(
-      ([name, s], i) =>
-        `${i + 1}. **${name}** — 📝 ${s.commits} commits | 🔀 ${s.prs} PR | ❗ ${s.issues} issues | 👀 ${s.reviews} reviews | ⭐ Total: ${s.total}`
-    )
-    .join("\n");
+  // Ambil top 5
+  const top = leaderboard.slice(0, 5);
 
-  const output = `
-## 🏆 Leaderboard Anggota Paling Aktif
+  // Buat tabel leaderboard
+  let table = `# 🏆 Leaderboard Anggota Aktif\n\n`;
+  table += `Hadiah akan diberikan oleh **Kapten Ammar** 🎁\n\n`;
+  table += `| Peringkat | Anggota | Skor |\n`;
+  table += `|-----------|---------|------|\n`;
 
-${leaderboard}
+  top.forEach((user, i) => {
+    table += `| ${i + 1} | [@${user.login}](https://github.com/${user.login}) | ${user.contributions} |\n`;
+  });
 
-> Update otomatis dari aktivitas GitHub (commit, PR, issue, review).
-`;
-
-  fs.writeFileSync("LEADERBOARD.md", output);
-
-  let readme = fs.readFileSync("README.md", "utf-8");
-  const start = "<!--LEADERBOARD_START-->";
-  const end = "<!--LEADERBOARD_END-->";
-  const regex = new RegExp(`${start}[\\s\\S]*${end}`);
-  readme = readme.replace(regex, `${start}\n${output}\n${end}`);
-  fs.writeFileSync("README.md", readme);
+  // Tulis ke README.md
+  fs.writeFileSync(".github/profile/README.md", table);
 }
 
-main().catch(err => {
-  console.error(err);
-  process.exit(1);
-});
+main();
