@@ -39,7 +39,7 @@
                       transition: transform 0.3s ease;"
                onmouseover="this.style.transform='scale(1.1) rotateY(10deg)'" 
                onmouseout="this.style.transform='scale(1) rotateY(0deg)'" />
-          <div style="position: absolute; top: -5px; right: -5px; background: #ffd700; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; animation: bounce 2s infinite;">👑</div>
+          <div style="position: absolute; top: -5px; right: -5px; background: #ffd700; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; animation: bounce 2s infinite;"></div>
         </div>
         <br/>
         <strong style="color: white; font-size: 18px;"><a href="https://github.com/scythe71" style="color: white; text-decoration: none;">Ammar</a></strong><br/>
