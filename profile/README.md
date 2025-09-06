@@ -61,7 +61,7 @@ Proyek flagship kami adalah **Sistem Absensi Karyawan** yang dikembangkan sebaga
 #### Visi
  Menjadi tim pengembang solid, kreatif, konsisten, dan bermanfaat.  
 
-####Misi  
+#### Misi  
 -  Aplikasi web dengan standar industri modern  
 -  Peningkatan keterampilan & kerja sama tim  
 -  Budaya dokumentasi & pengembangan profesional  
