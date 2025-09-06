@@ -26,7 +26,10 @@ jobs:
           node-version: 20
 
       - name: Run leaderboard script
-        run: node scripts/updateLeaderboard.js
+  run: node scripts/updateLeaderboard.js
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
       - name: Commit & Push changes
         run: |
