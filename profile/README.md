@@ -3,11 +3,11 @@
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=40&duration=3000&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=FOUR+A+TEAM" alt="Typing SVG" />
 
 <p>
-  <img src="https://img.shields.io/badge/Laravel-12-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-  <img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub-Organization-181717?style=for-the-badge&logo=github&logoColor=white" />
-  <img src="https://img.shields.io/badge/FOUR%20A%20TEAM?style=for-the-badge&logo=FOUR&logoColor=white" />
+<img src="https://img.shields.io/badge/Laravel-12-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
+<img src="https://img.shields.io/badge/Tailwind%20CSS-3-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+<img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+<img src="https://img.shields.io/badge/GitHub-Org-181717?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/FOUR%20A%20TEAM-6366F1?style=for-the-badge&logo=ghost&logoColor=white" />
 </p>
 
 <!-- Logo Komunitas -->
