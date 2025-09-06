@@ -1,9 +1,6 @@
 <div align="center">
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=40&duration=3000&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=FOUR+A+TEAM" alt="Typing SVG" />
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=FOUR A TEAM=Profile%20Views&color=0e75b6&style=flat-square" alt="visitor badge"/>
-</p>
 
 <p>
   <img src="https://img.shields.io/badge/Laravel-12-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
