@@ -16,13 +16,13 @@
 
 ---
 
-## 👥 Tim Pengembang
+## Tim Pengembang
 <table>
   <tr>
     <td align="center">
       <img src="https://github.com/scythe71.png" width="120" /><br/>
       <a href="https://github.com/scythe71"><b>Ammar</b></a><br/>
-      <sub>👑 Kapten</sub>
+      <sub>Kapten</sub>
     </td>
     <td align="center">
       <img src="https://github.com/Bangkah.png" width="120" /><br/>
@@ -43,8 +43,10 @@
 </table>
 
 ---
+</div>
 
-## 🌟 Tentang Kami
+
+## Tentang Kami
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=F75C7E&center=true&vCenter=true&width=800&lines=Tim+Developer+Profesional+%7C+4+Orang+Solid;Laravel+12+%2B+Tailwind+CSS+Expert;Sistem+Absensi+Karyawan+%7C+Workshop+Web+Lanjut" alt="About Us" />
 
@@ -53,29 +55,29 @@ Proyek flagship kami adalah **Sistem Absensi Karyawan** (*Workshop Web Lanjut*).
 
 ---
 
-## 🎯 Visi & Misi
+## Visi & Misi
 
 **Visi**  
-👉 Menjadi tim pengembang solid, kreatif, konsisten, dan bermanfaat.  
+ Menjadi tim pengembang solid, kreatif, konsisten, dan bermanfaat.  
 
 **Misi**  
-- ✨ Aplikasi web dengan standar industri modern  
-- 🎓 Peningkatan keterampilan & kerja sama tim  
-- 📚 Budaya dokumentasi & pengembangan profesional  
+-  Aplikasi web dengan standar industri modern  
+-  Peningkatan keterampilan & kerja sama tim  
+-  Budaya dokumentasi & pengembangan profesional  
 
 ---
 
 ## 📌 Deskripsi Proyek
 
-### 🏢 Sistem Absensi Karyawan
-- 👥 Kelola pegawai, jabatan, hari libur  
-- 📱 Absensi via QR Code & manual  
-- 📝 Izin & cuti dengan approval  
-- 📊 Rekap harian & bulanan  
+###  Sistem Absensi Karyawan
+-  Kelola pegawai, jabatan, hari libur  
+-  Absensi via QR Code & manual  
+-  Izin & cuti dengan approval  
+-  Rekap harian & bulanan  
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 - **Backend**: Laravel 12 (PHP 8.3)  
 - **Frontend**: Tailwind CSS 3.x  
 - **Database**: MySQL 8.x  
@@ -85,22 +87,21 @@ Proyek flagship kami adalah **Sistem Absensi Karyawan** (*Workshop Web Lanjut*).
 
 ---
 
-## 📄 Dokumentasi
-👉 [Software Requirements Specification (SRS)](./SRS.md)
+##  Dokumentasi
+ [Software Requirements Specification (SRS)](./SRS.md)
 
 ---
 
-## 🏆 Leaderboard Kontributor
+<!--##  Leaderboard Kontributor
 📊 Leaderboard akan diupdate otomatis...
 
+--->
+
+##  Kontak
+ Saat ini hanya menerima member untuk berdiskusi dan berkolaborasi.
+
 ---
 
-## 📬 Kontak
-⚠️ Saat ini hanya menerima member untuk berdiskusi dan berkolaborasi.
-
----
-
-## 📜 Lisensi
-🎓 Academic Project — digunakan untuk pembelajaran.  
+##  Lisensi
+ Academic Project — digunakan untuk pembelajaran.  
 _All rights reserved © FOUR A TEAM_
-</div>
