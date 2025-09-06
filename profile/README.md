@@ -58,23 +58,25 @@ Proyek flagship kami adalah **Sistem Absensi Karyawan** yang dikembangkan sebaga
 
 ## Visi & Misi
 
-#### Visi
- Menjadi tim pengembang solid, kreatif, konsisten, dan bermanfaat.  
+### Visi
+Menjadi tim pengembang yang solid, kreatif, dan konsisten dalam membangun proyek perangkat lunak yang bermanfaat.
 
-#### Misi  
--  Aplikasi web dengan standar industri modern  
--  Peningkatan keterampilan & kerja sama tim  
--  Budaya dokumentasi & pengembangan profesional  
+### Misi
+- Mengembangkan aplikasi berbasis web dengan standar industri modern.  
+- Meningkatkan keterampilan teknis dan kerja sama tim.  
+- Membiasakan budaya dokumentasi dan pengembangan profesional.   
 
 ---
 
 ## Deskripsi Proyek
 
 ###  Sistem Absensi Karyawan
--  Kelola pegawai, jabatan, hari libur  
--  Absensi via QR Code & manual  
--  Izin & cuti dengan approval  
--  Rekap harian & bulanan  
+Aplikasi ini dibangun untuk:
+- Mengelola data pegawai, jabatan, dan hari libur.  
+- Mencatat absensi masuk & pulang berbasis **QR Code** atau input manual.  
+- Mendukung pengajuan izin & cuti dengan persetujuan admin/operator.  
+- Menyediakan laporan rekap absensi harian dan bulanan.  
+- Menyediakan dashboard berbeda sesuai role (Admin, Operator, Pegawai).  
 
 ---
 
@@ -89,6 +91,7 @@ Proyek flagship kami adalah **Sistem Absensi Karyawan** yang dikembangkan sebaga
 ---
 
 ##  Dokumentasi
+Detail lengkap kebutuhan sistem bisa dibaca di file:  
  [Software Requirements Specification (SRS)](./SRS.md)
 
 ---
