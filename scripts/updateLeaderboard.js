@@ -1,49 +1,93 @@
-const { Octokit } = require("@octokit/rest");
 const fs = require("fs");
-const table = require("markdown-table");
+const path = require("path");
+const { Octokit } = require("@octokit/rest");
 
-const owner = "FOUR-A-TEAM"; 
-const repo = "absensi-karyawan"; 
-const token = process.env.GITHUB_TOKEN || ""; 
+const org = "FOUR-A-TEAM"; // Ganti dengan nama organisasi kamu
+const members = ["Ammar", "Atha", "Ayu", "Arini"]; // username GitHub anggota
 
-const octokit = new Octokit({ auth: token });
+const octokit = new Octokit({
+  auth: process.env.GITHUB_TOKEN, // token otomatis dari GitHub Actions
+});
 
-(async () => {
-  const { data: contributors } = await octokit.repos.listContributors({
-    owner,
-    repo,
-  });
+async function getContributions(username) {
+  let commits = 0;
+  let issues = 0;
+  let prs = 0;
 
-  const leaderboard = contributors.map((c, i) => [
-    `${i + 1}`,
-    `**${c.login}**`,
-    `${c.contributions} commits`,
-    `${c.contributions * 2} pts`,
-  ]);
+  try {
+    // Hitung commits (ambil dari events)
+    const events = await octokit.activity.listEventsForUser({
+      username,
+      per_page: 100,
+    });
 
-  const tableData = [["Peringkat", "Anggota", "Aktivitas", "Poin"], ...leaderboard];
+    events.data.forEach((event) => {
+      if (event.type === "PushEvent") {
+        commits += event.payload.commits.length;
+      }
+      if (event.type === "IssuesEvent") {
+        issues++;
+      }
+      if (event.type === "PullRequestEvent") {
+        prs++;
+      }
+    });
+  } catch (err) {
+    console.error(`Error fetch ${username}:`, err.message);
+  }
 
-  const newSection = `
+  return { username, commits, issues, prs, total: commits + issues + prs };
+}
+
+async function main() {
+  const results = [];
+
+  for (const member of members) {
+    const stats = await getContributions(member);
+    results.push(stats);
+  }
+
+  // Urutkan berdasarkan total kontribusi
+  results.sort((a, b) => b.total - a.total);
+
+  // Buat tabel markdown
+  let leaderboard = `
 ## 🏆 Leaderboard Kontributor
 
-> Anggota paling aktif akan ditraktir sama **Ammar** 🍽️  
-> Perhitungan berdasarkan commit, PR, issues, dan aktivitas di GitHub.
+Anggota paling aktif akan mendapatkan **hadiah spesial dari Kapten Ammar 🎁**  
 
-${table(tableData)}
+| Peringkat | Anggota | Commits | Issues | PR | Total |
+|-----------|---------|---------|--------|----|-------|
 `;
 
-  let readme = fs.readFileSync("README.md", "utf-8");
+  results.forEach((r, i) => {
+    leaderboard += `| ${i + 1} | ${r.username} | ${r.commits} | ${r.issues} | ${r.prs} | ${r.total} |\n`;
+  });
 
-  // replace section Leaderboard kalau sudah ada
-  if (readme.includes("## 🏆 Leaderboard Kontributor")) {
+  leaderboard += `\n✨ Tetap semangat! Setiap kontribusi dihargai 💪\n`;
+
+  // Update README.md
+  const readmePath = path.join(__dirname, "../profile/README.md");
+  let readme = fs.readFileSync(readmePath, "utf-8");
+
+  // Ganti bagian leaderboard (pakai marker agar mudah update otomatis)
+  const startMarker = "<!-- LEADERBOARD:START -->";
+  const endMarker = "<!-- LEADERBOARD:END -->";
+
+  const newSection = `${startMarker}\n${leaderboard}\n${endMarker}`;
+
+  if (readme.includes(startMarker) && readme.includes(endMarker)) {
     readme = readme.replace(
-      /## 🏆 Leaderboard Kontributor[\s\S]*?(?=## 🎖️|$)/,
+      new RegExp(`${startMarker}[\\s\\S]*${endMarker}`),
       newSection
     );
   } else {
-    // kalau belum ada, tambahkan sebelum Hall of Fame
-    readme = readme.replace("## 🎖️ Hall of Fame", newSection + "\n\n## 🎖️ Hall of Fame");
+    // Kalau belum ada marker, append di bawah
+    readme += `\n\n${newSection}\n`;
   }
 
-  fs.writeFileSync("README.md", readme);
-})();
+  fs.writeFileSync(readmePath, readme);
+  console.log("✅ Leaderboard updated!");
+}
+
+main();
