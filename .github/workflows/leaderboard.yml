@@ -2,34 +2,28 @@ name: Update Leaderboard
 
 on:
   schedule:
-    # jalan tiap hari jam 00:00 UTC (bisa diubah sesuai kebutuhan)
     - cron: "0 0 * * *"
-  workflow_dispatch: # bisa dijalankan manual dari tab Actions
+  workflow_dispatch: 
 
 jobs:
   update-leaderboard:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repository .github
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      # Step 3: Install dependencies (kalau pakai package.json, kalau tidak bisa dilewati)
       - name: Install dependencies
         run: npm install
 
-      # Step 4: Jalankan script updateLeaderboard.js
       - name: Run leaderboard script
         run: node .github/scripts/updateLeaderboard.js
 
-      # Step 5: Commit dan push perubahan ke repo
       - name: Commit and Push changes
         run: |
           git config user.name "github-actions[bot]"

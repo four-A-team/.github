@@ -2,11 +2,11 @@ const fs = require("fs");
 const path = require("path");
 const { Octokit } = require("@octokit/rest");
 
-const org = "FOUR-A-TEAM"; // Ganti dengan nama organisasi kamu
-const members = ["Ammar", "Atha", "Ayu", "Arini"]; // username GitHub anggota
+const org = "FOUR-A-TEAM"; 
+const members = ["Ammar", "Atha", "Ayu", "Arini"]; 
 
 const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN, // token otomatis dari GitHub Actions
+  auth: process.env.GITHUB_TOKEN, 
 });
 
 async function getContributions(username) {
@@ -15,7 +15,6 @@ async function getContributions(username) {
   let prs = 0;
 
   try {
-    // Hitung commits (ambil dari events)
     const events = await octokit.activity.listEventsForUser({
       username,
       per_page: 100,
@@ -47,10 +46,10 @@ async function main() {
     results.push(stats);
   }
 
-  // Urutkan berdasarkan total kontribusi
+
   results.sort((a, b) => b.total - a.total);
 
-  // Buat tabel markdown
+
   let leaderboard = `
 ## 🏆 Leaderboard Kontributor
 
@@ -66,11 +65,10 @@ Anggota paling aktif akan mendapatkan **hadiah spesial dari Kapten Ammar 🎁**
 
   leaderboard += `\n✨ Tetap semangat! Setiap kontribusi dihargai 💪\n`;
 
-  // Update README.md
+
   const readmePath = path.join(__dirname, "../profile/README.md");
   let readme = fs.readFileSync(readmePath, "utf-8");
 
-  // Ganti bagian leaderboard (pakai marker agar mudah update otomatis)
   const startMarker = "<!-- LEADERBOARD:START -->";
   const endMarker = "<!-- LEADERBOARD:END -->";
 

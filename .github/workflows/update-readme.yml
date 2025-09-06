@@ -4,14 +4,19 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch: # Bisa jalan manual juga
+  workflow_dispatch:
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # penting agar bisa push ke repo
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Git
         run: |
