@@ -50,8 +50,9 @@
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=F75C7E&center=true&vCenter=true&width=800&lines=Tim+Developer+Profesional+%7C+4+Orang+Solid;Laravel+12+%2B+Tailwind+CSS+Expert;Sistem+Absensi+Karyawan+%7C+Workshop+Web+Lanjut" alt="About Us" />
 
-**FOUR A TEAM** adalah tim developer elite yang fokus pada aplikasi web modern menggunakan **Laravel 12** + **Tailwind CSS**.  
-Proyek flagship kami adalah **Sistem Absensi Karyawan** (*Workshop Web Lanjut*).
+**FOUR A TEAM** adalah tim developer elite beranggotakan 4 orang yang berfokus pada pengembangan aplikasi web modern menggunakan **Laravel 12** dan **Tailwind CSS**. 
+Proyek flagship kami adalah **Sistem Absensi Karyawan** yang dikembangkan sebagai bagian dari mata kuliah *Workshop Web Lanjut* - sebuah implementasi nyata dari kerja tim profesional dan kolaborasi menggunakan **GitHub Organization**.
+
 
 ---
 
