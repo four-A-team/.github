@@ -1,34 +1,34 @@
-name: Update Leaderboard
+# name: Update Leaderboard
 
-on:
-  schedule:
-    - cron: "0 0 * * *"   # jalan otomatis tiap jam 00:00 UTC (bisa ubah sesuai kebutuhan)
-  workflow_dispatch:       # bisa dijalankan manual juga
+# on:
+#   schedule:
+#     - cron: "0 0 * * *"   # jalan otomatis tiap jam 00:00 UTC (bisa ubah sesuai kebutuhan)
+#   workflow_dispatch:       # bisa dijalankan manual juga
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18"
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: "18"
 
-      - name: Install dependencies
-        run: npm install @octokit/rest
+#       - name: Install dependencies
+#         run: npm install @octokit/rest
 
-      - name: Generate Leaderboard
-        run: node .github/scripts/leaderboard.js
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+#       - name: Generate Leaderboard
+#         run: node .github/scripts/leaderboard.js
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
-      - name: Commit and Push changes
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .github/profile/README.md
-          git commit -m "chore: update leaderboard [skip ci]" || echo "No changes to commit"
-          git push
+#       - name: Commit and Push changes
+#         run: |
+#           git config --global user.name "github-actions[bot]"
+#           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+#           git add .github/profile/README.md
+#           git commit -m "chore: update leaderboard [skip ci]" || echo "No changes to commit"
+#           git push
