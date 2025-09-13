@@ -1,34 +1,34 @@
-name: Auto Update README
+# name: Auto Update README
 
-on:
-  schedule:
-    - cron: "0 * * * *" # tiap jam
-  workflow_dispatch:
+# on:
+#   schedule:
+#     - cron: "0 * * * *" # tiap jam
+#   workflow_dispatch:
 
-jobs:
-  update-readme:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+# jobs:
+#   update-readme:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout repo
+#         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: 18
 
-      - name: Install dependencies
-        run: npm install @octokit/rest
+#       - name: Install dependencies
+#         run: npm install @octokit/rest
 
-      - name: Run leaderboard script
-        run: node scripts/updateLeaderboard.js
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       - name: Run leaderboard script
+#         run: node scripts/updateLeaderboard.js
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit & Push changes
-        run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add .github/profile/README.md
-          git commit -m "Update leaderboard [skip ci]" || echo "No changes"
-          git push
+#       - name: Commit & Push changes
+#         run: |
+#           git config --local user.name "github-actions[bot]"
+#           git config --local user.email "github-actions[bot]@users.noreply.github.com"
+#           git add .github/profile/README.md
+#           git commit -m "Update leaderboard [skip ci]" || echo "No changes"
+#           git push
