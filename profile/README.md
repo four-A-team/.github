@@ -79,7 +79,7 @@ Menjadi tim pengembang mahasiswa yang solid, kreatif, dan konsisten dalam menyel
 ## 📂 Dokumentasi
 Untuk detail lebih lanjut, silakan lihat file berikut:  
 - 📑 [Software Requirements Specification (SRS)](./docs/SRS.md)  
-- 🧩 [Flowchart](./docs/flowchart.png)  
+- 🧩 [Flowchart](docs/flowchart.png)  
 - 🗂️ [Entity Relationship Diagram (ERD)](./docs/ERD.png)  
 - ⚙️ [Penjelasan Cara Kerja Sistem](./docs/cara-kerja.md)  
 
