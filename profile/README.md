@@ -15,13 +15,13 @@
 
 ---
 
-## Tim Pengembang
+## 👥 Tim Pengembang
 <table>
   <tr>
     <td align="center">
       <img src="https://github.com/scythe71.png" width="120" /><br/>
       <a href="https://github.com/scythe71"><b>Ammar</b></a><br/>
-      <sub>Kapten</sub>
+      <sub>Ketua Tim</sub>
     </td>
     <td align="center">
       <img src="https://github.com/Bangkah.png" width="120" /><br/>
@@ -44,67 +44,58 @@
 ---
 </div>
 
-
-## Tentang Kami
-
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=F75C7E&center=true&vCenter=true&width=800&lines=Tim+Developer+Profesional+%7C+4+Orang+Solid;Laravel+12+%2B+Tailwind+CSS+Expert;Sistem+Absensi+Karyawan+%7C+Workshop+Web+Lanjut" alt="About Us" />
-
-**FOUR A TEAM** adalah tim developer elite beranggotakan 4 orang yang berfokus pada pengembangan aplikasi web modern menggunakan **Laravel 12** dan **Tailwind CSS**. 
-Proyek flagship kami adalah **Sistem Absensi Karyawan** yang dikembangkan sebagai bagian dari mata kuliah *Workshop Web Lanjut* - sebuah implementasi nyata dari kerja tim profesional dan kolaborasi menggunakan **GitHub Organization**.
-
+## 📌 Tentang Kami
+Kami adalah **FOUR A TEAM**, sebuah kelompok dari mata kuliah **Workshop Web Lanjut**.  
+Sebagai project akhir, kami memilih untuk membangun aplikasi **Sistem Manajemen Tugas Kelompok**.  
+Aplikasi ini dirancang untuk memudahkan **ketua dan anggota kelompok** dalam:  
+- Membuat dan mengatur kelompok,  
+- Mengelola proyek dan tugas,  
+- Memonitor progres pengerjaan,  
+- Berkolaborasi melalui komentar & lampiran,  
+- Serta menghasilkan laporan otomatis.  
 
 ---
 
-## Visi & Misi
+## 🎯 Visi & Misi
 
 ### Visi
-Menjadi tim pengembang yang solid, kreatif, dan konsisten dalam membangun proyek perangkat lunak yang bermanfaat.
+Menjadi tim pengembang mahasiswa yang solid, kreatif, dan konsisten dalam menyelesaikan project akhir secara profesional.  
 
 ### Misi
-- Mengembangkan aplikasi berbasis web dengan standar industri modern.  
-- Meningkatkan keterampilan teknis dan kerja sama tim.  
-- Membiasakan budaya dokumentasi dan pengembangan profesional.   
+- Menerapkan teknologi modern (**Laravel, Tailwind, MySQL**) dalam project nyata.  
+- Membangun kebiasaan dokumentasi dan kerja kolaboratif.  
+- Menyelesaikan project tepat waktu sesuai perencanaan.  
 
 ---
 
-## Deskripsi Proyek
-
-###  Sistem Absensi Karyawan
-Aplikasi ini dibangun untuk:
-- Mengelola data pegawai, jabatan, dan hari libur.  
-- Mencatat absensi masuk & pulang berbasis **QR Code** atau input manual.  
-- Mendukung pengajuan izin & cuti dengan persetujuan admin/operator.  
-- Menyediakan laporan rekap absensi harian dan bulanan.  
-- Menyediakan dashboard berbeda sesuai role (Admin, Operator, Pegawai).  
-
----
-
-## Tech Stack
+## 🛠️ Tech Stack
 - **Backend**: Laravel 12 (PHP 8.3)  
-- **Frontend**: Tailwind CSS 3.x  
+- **Frontend**: Blade + Tailwind CSS 3.x  
 - **Database**: MySQL 8.x  
 - **Auth**: Laravel Sanctum  
-- **QR Code**: simplesoftwareio/simple-qrcode  
-- **Excel Export**: maatwebsite/excel  
 
 ---
 
-##  Dokumentasi
-Detail lengkap kebutuhan sistem bisa dibaca di file:  
- [Software Requirements Specification (SRS)](./SRS.md)
+## 📂 Dokumentasi
+Untuk detail lebih lanjut, silakan lihat file berikut:  
+- 📑 [Software Requirements Specification (SRS)](./docs/SRS.md)  
+- 🧩 [Flowchart](./docs/flowchart.png)  
+- 🗂️ [Entity Relationship Diagram (ERD)](./docs/ERD.png)  
+- ⚙️ [Penjelasan Cara Kerja Sistem](./docs/cara-kerja.md)  
 
 ---
 
-<!--##  Leaderboard Kontributor
-📊 Leaderboard akan diupdate otomatis...
-
---->
-
-##  Kontak
- Saat ini hanya menerima member untuk berdiskusi dan berkolaborasi.
+## 📊 Alur Singkat Sistem
+1. **User Registrasi & Login** → masuk ke dashboard.  
+2. **Ketua** membuat kelompok & mengundang anggota.  
+3. **Proyek** dibuat di dalam kelompok.  
+4. **Tugas** dibagikan ke anggota, lalu anggota mengerjakan & upload hasil.  
+5. **Ketua** me-review tugas (approve/reject).  
+6. Semua progres direkap dalam **laporan otomatis**.  
+7. Anggota bisa berkolaborasi melalui **komentar & lampiran file**.  
 
 ---
 
-##  Lisensi
- Academic Project — digunakan untuk pembelajaran.  
+## 📜 Lisensi
+Academic Project — digunakan untuk pembelajaran.  
 _All rights reserved © FOUR A TEAM_
