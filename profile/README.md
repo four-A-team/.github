@@ -69,7 +69,7 @@ Menjadi tim pengembang mahasiswa yang solid, kreatif, dan konsisten dalam menyel
 ---
 
 ## 🛠️ Tech Stack
-- **Backend**: Laravel 12 (PHP 8.3)  
+- **Backend**: Laravel 12 (PHP 8.4)  
 - **Frontend**: Blade + Tailwind CSS 3.x  
 - **Database**: MySQL 8.x  
 - **Auth**: Laravel Sanctum  
@@ -78,21 +78,12 @@ Menjadi tim pengembang mahasiswa yang solid, kreatif, dan konsisten dalam menyel
 
 ## 📂 Dokumentasi
 Untuk detail lebih lanjut, silakan lihat file berikut:  
-- 📑 [Software Requirements Specification (SRS)](./docs/SRS.md)  
-- 🧩 [Flowchart](docs/flowchart.png)  
-- 🗂️ [Entity Relationship Diagram (ERD)](./docs/ERD.png)  
-- ⚙️ [Penjelasan Cara Kerja Sistem](./docs/cara-kerja.md)  
+
 
 ---
 
 ## 📊 Alur Singkat Sistem
-1. **User Registrasi & Login** → masuk ke dashboard.  
-2. **Ketua** membuat kelompok & mengundang anggota.  
-3. **Proyek** dibuat di dalam kelompok.  
-4. **Tugas** dibagikan ke anggota, lalu anggota mengerjakan & upload hasil.  
-5. **Ketua** me-review tugas (approve/reject).  
-6. Semua progres direkap dalam **laporan otomatis**.  
-7. Anggota bisa berkolaborasi melalui **komentar & lampiran file**.  
+
 
 ---
 
