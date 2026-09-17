@@ -19,8 +19,8 @@
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/scythe71.png" width="120" /><br/>
-      <a href="https://github.com/scythe71"><b>Ammar</b></a><br/>
+      <img src="https://github.com/ammarramma.png" width="120" /><br/>
+      <a href="https://github.com/ammarramma"><b>Ammar</b></a><br/>
       <sub>Ketua Tim</sub>
     </td>
     <td align="center">
