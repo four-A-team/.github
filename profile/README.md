@@ -1,4 +1,4 @@
-<img width="760" height="1012" alt="{EF7A7F6B-8BE5-45B2-AC6E-6BD5374F22F0}" src="https://github.com/user-attachments/assets/c5356180-39d1-4070-ba96-5638c73bc5c3" /><div align="center">
+<div align="center">
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=40&duration=3000&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=FOUR+A+TEAM" alt="Typing SVG" />
 
